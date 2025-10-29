@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { prisma } from "@/lib/prisma";
 
+ 
 export default async function Home() {
 
   const snippets = await prisma.snippet.findMany();
