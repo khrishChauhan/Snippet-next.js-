@@ -1,9 +1,10 @@
 "use client"
 import React from 'react'
 import { Editor } from '@monaco-editor/react'
-import type { Snippet } from '@prisma/client'
+import type { Snippet } from '@prisma/client';
 import { Button } from './button'
 import { saveSnippet } from '@/actions'
+
 
 const EditSnippetForm = ({snippet}:{snippet:Snippet}) => {
 

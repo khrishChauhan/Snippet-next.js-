@@ -38,4 +38,13 @@ const SnippetDetailPage = async ({ params }: { params: Promise<{ id: string }> }
     )
 }
 
-export default SnippetDetailPage
+export default SnippetDetailPage;
+
+export const generateStaticParams = async () => {
+    const snippets = await prisma.snippet.findMany();
+
+    return snippets.map((snippet) => ({
+        id: snippet.id.toString()
+    }));
+    
+}
